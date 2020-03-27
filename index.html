@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="/assets/reset.css">
+        <link rel="stylesheet" href="/assets/boeing.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="/js/to.js" charset="utf-8"></script>
+        <title>V-Speed Computer</title>
+    </head>
+    <body>
+        <h1 id="out:name">---</h1>
+        <form id="inputs" action="" onsubmit="start(); return false;">
+            <div class="zone">
+                <fieldset>
+                    <label for="in:alt">ALT</label>
+                    <input id="in:alt" type="number" inputmode="numeric" name="alt" placeholder="ft MSL" />
+                    <label for="in:oat">OAT</label>
+                    <input
+                        id="in:oat"
+                        type="number"
+                        inputmode="numeric"
+                        name="oat"
+                        placeholder="°C"
+                        units="deg"/>
+
+                    <label for="in:qnh">QNH</label>
+                    <input
+                        id="in:qnh"
+                        type="number"
+                        inputmode="numeric"
+                        name="qnh"
+                        placeholder="HPa"
+                        units="hpa"
+                        step="1"
+                        value="1013"/>
+
+                </fieldset>
+                <fieldset>
+
+                    <label for="in:tow">TOW</label>
+                    <input id="in:tow"
+                        type="number"
+                        inputmode="numeric"
+                        name="tow"
+                        placeholder="KG" />
+
+                    <label for="in:flaps">FLAPS</label>
+                    <select id="in:flaps" name="flaps">
+                    </select>
+                </fieldset>
+            </div>
+            <input type="submit" value="CALC" />
+        </form>
+
+
+        <div id="results" class="zone grid c1-1">
+            <div id="i-speeds">
+                <span class="label">VFLUP<span class="data" id="out:vfs">---</span></span>
+                <span class="label">VAPP<span class="data" id="out:tgt">---</span></span>
+            </div>
+            <div id="v-speeds">
+                <span class="label">V1<span class="data" id="out:v1">---</span></span>
+                <span class="label">V2<span class="data" id="out:vr">---</span></span>
+                <span class="label">VR<span class="data" id="out:v2">---</span></span>
+            </div>
+            <span id="no-to">NO TAKEOFF</span>
+        </div>
+    </body>
+</html>

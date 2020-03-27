@@ -1,0 +1,128 @@
+html {
+    background-color: #111;
+    color: #eee;
+    font-family: sans-serif;
+}
+
+body {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    font-size: 16pt;
+    padding: .4em;
+}
+
+h1, h2, h3, h4, h5 {
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: bolder;
+}
+
+.zone {
+    border: 2pt solid #00a3ff;
+}
+
+.highlight {
+    background: #999;
+}
+
+fieldset {
+    display: grid;
+    grid-template-columns: 2fr 6fr;
+    grid-column-gap: .6em;
+    grid-row-gap: .6em;
+    align-items: center;
+    padding: 1em;
+    border: none;
+}
+
+label {
+    font-weight: bold;
+    text-align: right;
+}
+
+input, select {
+    -webkit-appearance: none;
+    font-weight: bold;
+    max-width: 100%;
+    min-width: 0;
+    font-size: inherit;
+    background-color: #666;
+    color: white;
+    padding: .4em .2em;
+    border: none;
+    outline: none;
+    border-radius: 0;
+}
+
+input[type=submit] {
+    -webkit-appearance: none;
+    font-weight: bold;
+    display: block;
+    background-color: #666;
+    border: none;
+    font-size: 16pt;
+    color: white;
+    padding: .6em;
+    width: 50%;
+    margin: .8em auto;
+}
+
+input[type=submit]:hover {
+    cursor: pointer;
+}
+
+input[type=submit]:active {
+    background-color: #567;
+}
+
+input:focus, select:focus {
+    background: #567;
+}
+
+.grid {
+    padding: 1em;
+    display: grid;
+    grid-column-gap: .6em;
+    grid-row-gap: .6em;
+        grid-template-columns: 1fr 1fr;
+}
+
+.grid .c1-1 {
+}
+
+#results {
+    position: relative;
+    font-family: monospace;
+}
+
+#results .label {
+    display: block;
+    color: rgba(255, 255, 255, 0.5)
+}
+
+#results .label .data {
+    font-weight: bold;
+    color: white;
+    font-size: 1.35em;
+}
+
+#results > div:nth-child(even) {
+    text-align: right;
+}
+
+#results > div:nth-child(odd) {
+    text-align: left;
+}
+
+#no-to {
+    font-size: 40pt;
+    font-weight: bold;
+    overflow-x: hidden;
+    position: absolute;
+    top: 30%;
+    left: 0;
+    right: 0;
+    color: rgba(255, 200, 200, 0.3);
+    text-align: center;
+}
