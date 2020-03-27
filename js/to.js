@@ -15,7 +15,7 @@ function loadData() {
     if(window.perf_data) {
         return Promise.resolve(window.perf_data);
     }
-    return fetch(`/data/${window.acft}.json`)
+    return fetch(`data/${window.acft}.json`)
         .then((res) => res.json())
         .then((data) => {
             window.perf_data = data;
